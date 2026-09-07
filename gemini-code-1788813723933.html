@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Larissa Raiane da Silva | Design Instrucional & Educação Corporativa</title>
+    <meta name="description" content="Portfólio profissional de Design Instrucional e Educação Corporativa por Larissa Raiane da Silva. Soluções educacionais, T&D e experiências de aprendizagem interativas." />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+      /* Reset e Variáveis Globais */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          sans-serif;
+      }
+
+      :root {
+        --bg-primary: #0f172a;
+        --bg-secondary: #1e293b;
+        --bg-card: #1e293b;
+        --border-color: #334155;
+        --accent-color: #38bdf8;
+        --accent-hover: #0284c7;
+        --text-main: #f8fafc;
+        --text-muted: #94a3b8;
+        --shadow-color: rgba(0, 0, 0, 0.3);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background-color: var(--bg-primary);
+        color: var(--text-main);
+        line-height: 1.6;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      /* Navegação */
+      header {
+        position: sticky;
+        top: 0;
+        background-color: rgba(15, 23, 42, 0.95);
+        backdrop-filter: blur(8px);
+        z-index: 100;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.25rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        text-decoration: none;
+      }
+
+      .logo-text {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.2;
+      }
+
+      .logo-title {
+        font-size: 1.25rem;
+        font-weight: 800;
+        color: var(--accent-color);
+      }
+
+      .logo-subtitle {
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: var(--text-muted);
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 1.5rem;
+        list-style: none;
+      }
+
+      .nav-links a {
+        color: var(--text-muted);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.95rem;
+        transition: color 0.2s ease;
+      }
+
+      .nav-links a:hover {
+        color: var(--accent-color);
+      }
+
+      /* Container Principal */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 3rem 1.5rem;
+        width: 100%;
+        flex: 1;
+      }
+
+      /* Seção Hero */
+      .hero {
+        text-align: center;
+        max-width: 900px;
+        margin: 0 auto 5rem auto;
+      }
+
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: rgba(56, 189, 248, 0.1);
+        color: var(--accent-color);
+        padding: 0.4rem 1rem;
+        border-radius: 50px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        border: 1px solid rgba(56, 189, 248, 0.2);
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        line-height: 1.25;
+        margin-bottom: 1.5rem;
+        letter-spacing: -0.02em;
+      }
+
+      .hero h1 span {
+        color: var(--accent-color);
+      }
+
+      .hero-subtitle-text {
+        font-size: 1.1rem;
+        color: var(--text-muted);
+        max-width: 780px;
+        margin: 0 auto 2.5rem auto;
+        line-height: 1.7;
+      }
+
+      .hero-pillars {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .pillar-card {
+        background-color: var(--bg-secondary);
+        border: 1px solid var(--border-color);
+        padding: 1rem;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 0.9rem;
+        color: var(--accent-color);
+      }
+
+      /* Seções Gerais */
+      .section-block {
+        margin-bottom: 5rem;
+      }
+
+      .section-header-center {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      .section-subtitle {
+        color: var(--text-muted);
+        font-size: 1rem;
+      }
+
+      /* Seção Sobre Mim Estratégica */
+      .about-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .about-card {
+        background-color: var(--bg-card);
+        border: 1px solid var(--border-color);
+        padding: 1.75rem;
+        border-radius: 12px;
+      }
+
+      .about-card h3 {
+        color: var(--accent-color);
+        font-size: 1.2rem;
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .about-card p {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      /* Processo Instrucional (Como Eu Trabalho) */
+      .process-flow {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.25rem;
+      }
+
+      .process-step {
+        background-color: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        padding: 1.5rem;
+        position: relative;
+      }
+
+      .step-number {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--accent-color);
+        margin-bottom: 0.5rem;
+      }
+
+      .step-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      .step-desc {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+      }
+
+      /* Raciocínio DI Visual Banner */
+      .di-logic-banner {
+        background: linear-gradient(135deg, rgba(30, 41, 59, 1) 0%, rgba(15, 23, 42, 1) 100%);
+        border: 1px solid var(--accent-color);
+        border-radius: 12px;
+        padding: 2rem;
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+
+      .di-logic-banner h3 {
+        color: var(--accent-color);
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+      }
+
+      .di-logic-steps {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        font-weight: 700;
+        font-size: 0.95rem;
+      }
+
+      .di-logic-arrow {
+        color: var(--accent-color);
+      }
+
+      /* Seção de Projetos / Estudos de Caso */
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+      }
+
+      .card {
+        background-color: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-6px);
+        border-color: var(--accent-color);
+        box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.15);
+      }
+
+      .card-preview {
+        width: 100%;
+        height: 190px;
+        background-color: #0f172a;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-muted);
+      }
+
+      .card-badge-type {
+        position: absolute;
+        top: 0.75rem;
+        left: 0.75rem;
+        background-color: rgba(15, 23, 42, 0.85);
+        border: 1px solid var(--border-color);
+        color: var(--accent-color);
+        font-size: 0.75rem;
+        padding: 0.25rem 0.6rem;
+        border-radius: 6px;
+        font-weight: 600;
+        backdrop-filter: blur(4px);
+      }
+
+      .card-body {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+
+      .card-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+        color: var(--text-main);
+      }
+
+      .card-meta-block {
+        background-color: rgba(15, 23, 42, 0.5);
+        border-left: 3px solid var(--accent-color);
+        padding: 0.6rem 0.8rem;
+        margin-bottom: 1rem;
+        font-size: 0.85rem;
+      }
+
+      .card-meta-block strong {
+        color: var(--text-main);
+      }
+
+      .card-meta-block span {
+        color: var(--text-muted);
+        display: block;
+      }
+
+      .card-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-bottom: 1.5rem;
+        margin-top: auto;
+      }
+
+      .tag {
+        font-size: 0.75rem;
+        background-color: rgba(51, 65, 85, 0.5);
+        color: #cbd5e1;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-weight: 500;
+      }
+
+      /* Botões */
+      .btn-group {
+        display: flex;
+        gap: 0.75rem;
+        flex-direction: column;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        border: none;
+      }
+
+      .btn-primary {
+        background-color: var(--accent-color);
+        color: #0f172a;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--accent-hover);
+        color: #ffffff;
+      }
+
+      .btn-outline {
+        background-color: transparent;
+        border: 1px solid var(--border-color);
+        color: var(--text-main);
+      }
+
+      .btn-outline:hover {
+        border-color: var(--accent-color);
+        color: var(--accent-color);
+        background-color: rgba(56, 189, 248, 0.05);
+      }
+
+      /* Seção de Metodologias & Estratégias */
+      .methodologies-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.25rem;
+      }
+
+      .methodology-card {
+        background-color: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 10px;
+        padding: 1.25rem;
+      }
+
+      .methodology-card h4 {
+        color: var(--accent-color);
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .methodology-card p {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+      }
+
+      /* Seção Competências */
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .skill-category {
+        background-color: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        padding: 1.5rem;
+      }
+
+      .skill-category h3 {
+        font-size: 1.1rem;
+        color: var(--accent-color);
+        margin-bottom: 1rem;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 0.5rem;
+      }
+
+      .skill-list {
+        list-style: none;
+      }
+
+      .skill-list li {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .skill-list li::before {
+        content: "•";
+        color: var(--accent-color);
+        font-weight: bold;
+      }
+
+      /* Seção CTA e Contato */
+      .cta-section {
+        background-color: var(--bg-secondary);
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        padding: 3rem 2rem;
+        text-align: center;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .cta-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+      }
+
+      .cta-section p {
+        color: var(--text-muted);
+        max-width: 600px;
+        margin: 0 auto 2rem auto;
+      }
+
+      .cta-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .cta-btn {
+        width: auto;
+        min-width: 200px;
+      }
+
+      /* Rodapé */
+      footer {
+        border-top: 1px solid var(--border-color);
+        padding: 3rem 1.5rem;
+        text-align: center;
+        margin-top: 4rem;
+        background-color: #0b1120;
+      }
+
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .social-icon {
+        color: var(--text-muted);
+        font-size: 1.25rem;
+        transition: color 0.2s ease;
+        text-decoration: none;
+      }
+
+      .social-icon:hover {
+        color: var(--accent-color);
+      }
+
+      footer p {
+        color: var(--text-muted);
+        font-size: 0.875rem;
+      }
+
+      /* Modal de Estudo de Caso (Visão Detalhada) */
+      .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(15, 23, 42, 0.9);
+        backdrop-filter: blur(8px);
+        z-index: 1000;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        padding: 1.5rem;
+        overflow-y: auto;
+      }
+
+      .modal-overlay.active {
+        display: flex;
+      }
+
+      .modal-container {
+        background-color: var(--bg-primary);
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        max-width: 900px;
+        width: 100%;
+        max-height: 90vh;
+        overflow-y: auto;
+        padding: 2.5rem;
+        position: relative;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+      }
+
+      .modal-close {
+        position: absolute;
+        top: 1.25rem;
+        right: 1.25rem;
+        background: transparent;
+        border: none;
+        color: var(--text-muted);
+        cursor: pointer;
+        transition: color 0.2s;
+      }
+
+      .modal-close:hover {
+        color: var(--accent-color);
+      }
+
+      .case-header {
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .case-tag-fictional {
+        display: inline-block;
+        background-color: rgba(56, 189, 248, 0.1);
+        color: var(--accent-color);
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 0.2rem 0.6rem;
+        border-radius: 4px;
+        margin-bottom: 0.75rem;
+        text-transform: uppercase;
+      }
+
+      .case-title {
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+      }
+
+      .case-meta-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+        background-color: var(--bg-secondary);
+        padding: 1.25rem;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+      }
+
+      .case-meta-item strong {
+        display: block;
+        font-size: 0.75rem;
+        color: var(--accent-color);
+        text-transform: uppercase;
+      }
+
+      .case-meta-item span {
+        font-size: 0.9rem;
+        color: var(--text-main);
+      }
+
+      .case-section {
+        margin-bottom: 2rem;
+      }
+
+      .case-section h3 {
+        font-size: 1.2rem;
+        color: var(--accent-color);
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .case-section p, .case-section ul {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      .case-section ul {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+      }
+
+      .storyboard-box {
+        background-color: var(--bg-secondary);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 1rem;
+        margin-top: 0.75rem;
+        font-size: 0.875rem;
+      }
+
+      .storyboard-row {
+        display: grid;
+        grid-template-columns: 80px 1fr;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .storyboard-label {
+        font-weight: bold;
+        color: var(--accent-color);
+      }
+
+      .back-to-projects-btn {
+        margin-bottom: 1.5rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--accent-color);
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        font-weight: 600;
+      }
+
+      /* Responsividade */
+      @media (max-width: 768px) {
+        nav {
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .hero h1 {
+          font-size: 1.85rem;
+        }
+
+        .btn-group {
+          flex-direction: column;
+        }
+
+        .modal-container {
+          padding: 1.5rem;
+        }
+
+        .di-logic-steps {
+          flex-direction: column;
+        }
+
+        .di-logic-arrow {
+          transform: rotate(90deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav aria-label="Navegação principal">
+        <a href="#" class="logo">
+          <i data-lucide="award" style="color: var(--accent-color);"></i>
+          <div class="logo-text">
+            <span class="logo-title">Larissa Raiane</span>
+            <span class="logo-subtitle">Design Instrucional & Educação Corporativa</span>
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#processo">Processo DI</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#competencias">Competências</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container">
+      
+      <!-- HERO -->
+      <section class="hero" id="topo">
+        <div class="hero-badge">
+          <i data-lucide="sparkles" style="width: 16px; height: 16px;"></i>
+          <span>Designer Instrucional &cdot; Educação Corporativa &cdot; Experiências Digitais</span>
+        </div>
+        <h1>
+          Transformando problemas de negócio em <span>experiências de aprendizagem</span> eficazes.
+        </h1>
+        <p class="hero-subtitle-text">
+          Ajudo organizações a desenharem trilhas, simulações e ferramentas de apoio à performance que engajam colaboradores e geram mudanças reais de comportamento e competência.
+        </p>
+        <div class="hero-pillars">
+          <div class="pillar-card">Análise de Necessidades</div>
+          <div class="pillar-card">Arquitetura Pedagógica</div>
+          <div class="pillar-card">Simulações & Cenários</div>
+          <div class="pillar-card">Tecnologia Aplicada</div>
+        </div>
+        <div style="margin-top: 2.5rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a href="#projetos" class="btn btn-primary cta-btn">Explorar Projetos →</a>
+          <a href="#processo" class="btn btn-outline cta-btn">Conhecer meu Processo →</a>
+        </div>
+      </section>
+
+      <!-- BANNER DE RACIOCÍNIO DI -->
+      <div class="di-logic-banner">
+        <h3>Como eu penso um projeto de Design Instrucional</h3>
+        <div class="di-logic-steps">
+          <span>Diagnóstico</span>
+          <span class="di-logic-arrow"><i data-lucide="chevron-right"></i></span>
+          <span>Objetivos Mensuráveis</span>
+          <span class="di-logic-arrow"><i data-lucide="chevron-right"></i></span>
+          <span>Estratégia Baseada em Cenários</span>
+          <span class="di-logic-arrow"><i data-lucide="chevron-right"></i></span>
+          <span>Arquitetura Digital Interativa</span>
+        </div>
+      </div>
+
+      <!-- SEÇÃO SOBRE MIM -->
+      <section class="section-block" id="sobre">
+        <div class="section-header-center">
+          <h2 class="section-title">Sobre Mim</h2>
+          <p class="section-subtitle">Visão pedagógica aliada à tecnologia e orientação para resultados</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-card">
+            <h3><i data-lucide="user"></i> Posicionamento Profissional</h3>
+            <p>
+              Sou Designer Instrucional com formação em Pedagogia, focada em educação corporativa e desenvolvimento de experiências de aprendizagem interativas. Trabalho na ponte entre as diretrizes de T&D e a implementação em ambientes digitais funcionais.
+            </p>
+          </div>
+          <div class="about-card">
+            <h3><i data-lucide="brain"></i> Abordagem Analítica</h3>
+            <p>
+              Acredito que treinamentos corporativos de impacto não nascem de "telas bonitas", mas de uma análise profunda de lacunas de desempenho. Planejo cada etapa considerando a carga cognitiva, a andragogia e a aplicação direta no cotidiano do profissional.
+            </p>
+          </div>
+          <div class="about-card">
+            <h3><i data-lucide="cpu"></i> Tecnologia & Execução</h3>
+            <p>
+              Capaz de transitar fluentemente entre a especificação pedagógica (storyboards, roteiros e mapas conceituais) e a materialização em protótipos digitais interativos usando HTML, CSS e JavaScript.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO PROCESSO DE DESIGN INSTRUCIONAL -->
+      <section class="section-block" id="processo">
+        <div class="section-header-center">
+          <h2 class="section-title">Meu Processo de Design Instrucional</h2>
+          <p class="section-subtitle">Rigores metodológicos aplicados do levantamento de necessidades à entrega</p>
+        </div>
+        <div class="process-flow">
+          <div class="process-step">
+            <div class="step-number">01</div>
+            <div class="step-title">Diagnóstico</div>
+            <div class="step-desc">Identificação das lacunas de desempenho e do problema real de negócio antes de propor qualquer treinamento.</div>
+          </div>
+          <div class="process-step">
+            <div class="step-number">02</div>
+            <div class="step-title">Análise do Público</div>
+            <div class="step-desc">Mapeamento do perfil dos participantes, rotina, nível de proficiência prévia e barreiras de acesso.</div>
+          </div>
+          <div class="process-step">
+            <div class="step-number">03</div>
+            <div class="step-title">Objetivos Instrucionais</div>
+            <div class="step-desc">Definição de metas de aprendizagem claras baseadas em verbos de ação mensuráveis (taxonomia de Bloom).</div>
+          </div>
+          <div class="process-step">
+            <div class="step-number">04</div>
+            <div class="step-title">Estratégia & Arquitetura</div>
+            <div class="step-desc">Escolha de abordagens andragógicas (cenários, simulações, microlearning) e desenho do fluxo da trilha.</div>
+          </div>
+          <div class="process-step">
+            <div class="step-number">05</div>
+            <div class="step-title">Desenvolvimento</div>
+            <div class="step-desc">Roteirização detalhada, criação de protótipos interativos e estruturação de interfaces intuitivas (UX/UI).</div>
+          </div>
+          <div class="process-step">
+            <div class="step-number">06</div>
+            <div class="step-title">Avaliação & Iteração</div>
+            <div class="step-desc">Validação da eficácia da aprendizagem por meio de avaliações práticas, quizes situacionais e ciclos de melhoria.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO DE PROJETOS / CASES -->
+      <section class="section-block" id="projetos">
+        <div class="section-header-center">
+          <h2 class="section-title">Estudos de Caso & Soluções Educacionais</h2>
+          <p class="section-subtitle">Explore os projetos conceituais desenhados para diferentes contextos corporativos</p>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- PROJETO 1: LGPD & CIBERSEGURANÇA -->
+          <div class="card">
+            <div class="card-preview">
+              <span class="card-badge-type">Projeto Conceituado</span>
+              <i data-lucide="shield-alert" style="width: 48px; height: 48px; color: var(--accent-color);"></i>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">LGPD & Cibersegurança Corporativa</h3>
+              
+              <div class="card-meta-block">
+                <strong>Resumo do Case:</strong>
+                <span>Foco em compliance, conscientização de riscos e tomada de decisão segura diante de ameaças cotidianas.</span>
+              </div>
+
+              <div class="card-tags">
+                <span class="tag">Compliance</span>
+                <span class="tag">Simulação de Riscos</span>
+                <span class="tag">Tomada de Decisão</span>
+              </div>
+
+              <div class="btn-group">
+                <button class="btn btn-primary" onclick="openModal('modal-lgpd')">Explorar treinamento →</button>
+                <a href="https://github.com/larissasilvah" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Ver código no GitHub →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJETO 2: ATENDIMENTO B2B & GESTÃO DE CONTAS (DESTAQUE) -->
+          <div class="card" style="border-color: var(--accent-color);">
+            <div class="card-preview">
+              <span class="card-badge-type">Destaque &cdot; Case Completo</span>
+              <i data-lucide="briefcase" style="width: 48px; height: 48px; color: var(--accent-color);"></i>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Atendimento B2B & Gestão de Contas</h3>
+              
+              <div class="card-meta-block">
+                <strong>Resumo do Case:</strong>
+                <span>Capacitação consultiva voltada para negociação com múltiplos interlocutores, resolução de crises e retenção.</span>
+              </div>
+
+              <div class="card-tags">
+                <span class="tag">Comunicação Consultiva</span>
+                <span class="tag">Gestão de Crises</span>
+                <span class="tag">Simulação Interativa</span>
+              </div>
+
+              <div class="btn-group">
+                <button class="btn btn-primary" onclick="openModal('modal-b2b')">Explorar treinamento →</button>
+                <a href="https://github.com/larissasilvah" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Ver código no GitHub →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJETO 3: COMUNICAÇÃO ASSERTIVA & FEEDBACK -->
+          <div class="card">
+            <div class="card-preview">
+              <span class="card-badge-type">Projeto Autoral</span>
+              <i data-lucide="message-square-code" style="width: 48px; height: 48px; color: var(--accent-color);"></i>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Comunicação Assertiva & Feedback no Trabalho Remoto</h3>
+              
+              <div class="card-meta-block">
+                <strong>Resumo do Case:</strong>
+                <span>Desenvolvimento comportamental focado em dar e receber feedbacks construtivos em equipes distribuídas.</span>
+              </div>
+
+              <div class="card-tags">
+                <span class="tag">Desenvolvimento Comportamental</span>
+                <span class="tag">Feedback</span>
+                <span class="tag">Cenários Práticos</span>
+              </div>
+
+              <div class="btn-group">
+                <button class="btn btn-primary" onclick="openModal('modal-comunicacao')">Explorar treinamento →</button>
+                <a href="https://github.com/larissasilvah" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Ver código no GitHub →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJETO 4: FERRAMENTA AUTOMÁTICA — EPI -->
+          <div class="card">
+            <div class="card-preview">
+              <span class="card-badge-type">Ferramenta de Apoio</span>
+              <i data-lucide="hard-hat" style="width: 48px; height: 48px; color: var(--accent-color);"></i>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Ferramenta Automática de Seleção de EPI</h3>
+              
+              <div class="card-meta-block">
+                <strong>Resumo do Case:</strong>
+                <span>Solução digital de apoio ao desempenho voltada para checagem rápida de Equipamentos de Proteção Individual por risco.</span>
+              </div>
+
+              <div class="card-tags">
+                <span class="tag">Performance Support</span>
+                <span class="tag">Treinamento Técnico</span>
+                <span class="tag">Ferramenta Digital</span>
+              </div>
+
+              <div class="btn-group">
+                <button class="btn btn-primary" onclick="openModal('modal-epi')">Explorar treinamento →</button>
+                <a href="https://github.com/larissasilvah" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Ver código no GitHub →</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SEÇÃO COMPETÊNCIAS -->
+      <section class="section-block" id="competencias">
+        <div class="section-header-center">
+          <h2 class="section-title">Competências Profissionais</h2>
+          <p class="section-subtitle">Habilidades organizadas por pilares de atuação em T&D</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Design Instrucional</h3>
+            <ul class="skill-list">
+              <li>Análise de necessidades de aprendizagem</li>
+              <li>Definição de objetivos de aprendizagem</li>
+              <li>Arquitetura de aprendizagem</li>
+              <li>Estratégias instrucionais avançadas</li>
+              <li>Aprendizagem baseada em cenários</li>
+              <li>Avaliação da aprendizagem</li>
+              <li>Elaboração de materiais educacionais</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Educação Corporativa</h3>
+            <ul class="skill-list">
+              <li>Treinamentos corporativos estruturados</li>
+              <li>Desenvolvimento de competências</li>
+              <li>Aprendizagem aplicada ao trabalho</li>
+              <li>Princípios de educação de adultos (Andragogia)</li>
+              <li>Desenvolvimento profissional contínuo</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Digital & Experiência</h3>
+            <ul class="skill-list">
+              <li>HTML5, CSS3 e JavaScript aplicados</li>
+              <li>Criação de experiências interativas</li>
+              <li>Prototipação de soluções educacionais</li>
+              <li>Organização de conteúdo e UI/UX educacional</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Complementares</h3>
+            <ul class="skill-list">
+              <li>Fundamentos em Pedagogia</li>
+              <li>Processos de RH e T&D</li>
+              <li>Comunicação organizacional</li>
+              <li>Desenvolvimento de pessoas</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO CONTATO -->
+      <section class="cta-section" id="contato">
+        <h2>Vamos conversar sobre projetos educacionais?</h2>
+        <p>Estou em busca de oportunidades para aplicar meu raciocínio de Design Instrucional e colaborar com equipes de Educação Corporativa orientadas a impacto.</p>
+        <div class="cta-buttons">
+          <a href="mailto:larissasilva.h@outlook.com" class="btn btn-primary cta-btn">Enviar E-mail</a>
+          <a href="https://www.linkedin.com/in/larissasilvah/" target="_blank" rel="noopener noreferrer" class="btn btn-outline cta-btn">Conectar no LinkedIn</a>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+      <div class="social-links">
+        <a href="https://github.com/larissasilvah" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub"><i data-lucide="github"></i></a>
+        <a href="https://www.linkedin.com/in/larissasilvah/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+        <a href="mailto:larissasilva.h@outlook.com" class="social-icon" aria-label="E-mail"><i data-lucide="mail"></i></a>
+      </div>
+      <p>&copy; 2026 Larissa Raiane da Silva. Todos os direitos reservados. Projeto de Portfólio Profissional.</p>
+    </footer>
+
+    <!-- MODAIS DE ESTUDOS DE CASO (DETALHES COMPLETOS) -->
+
+    <!-- MODAL 1: LGPD -->
+    <div class="modal-overlay" id="modal-lgpd">
+      <div class="modal-container">
+        <button class="modal-close" onclick="closeModal('modal-lgpd')"><i data-lucide="x"></i></button>
+        <button class="back-to-projects-btn" onclick="closeModal('modal-lgpd')"><i data-lucide="arrow-left"></i> Voltar aos projetos</button>
+        
+        <div class="case-header">
+          <span class="case-tag-fictional">Projeto Conceituual &bull; Estudo de Caso</span>
+          <h2 class="case-title">LGPD & Cibersegurança Corporativa</h2>
+        </div>
+
+        <div class="case-meta-grid">
+          <div class="case-meta-item">
+            <strong>Solução</strong>
+            <span>Treinamento interativo de compliance</span>
+          </div>
+          <div class="case-meta-item">
+            <strong>Público</strong>
+            <span>Colaboradores corporativos gerais</span>
+          </div>
+          <div class="case-meta-item">
+            <strong>Formato</strong>
+            <span>Trilha digital baseada em dilemas</span>
+          </div>
+          <div class="case-meta-item">
+            <strong>Estratégias</strong>
+            <span>Simulações de risco + Feedback imediato</span>
+          </div>
+          <div class="case-meta-item">
+            <strong>Tecnologias</strong>
+            <span>HTML5, CSS3, JavaScript</span>
+          </div>
+        </div>
+
+        <div class="case-section">
+          <h3>Contexto</h3>
+          <p>Organizações lidam diariamente com dados sensíveis de clientes e diretrizes rigorosas de conformidade regulatória. O vazamento de dados decorrente de falhas humanas representa um risco financeiro e reputacional crítico.</p>
+        </div>
+
+        <div class="case-section">
+          <h3>Problema & Problema de Aprendizagem</h3>
+          <p><strong>Problema organizacional:</strong> Colaboradores negligenciam práticas básicas de segurança da informação por considerarem as políticas abstratas ou burocráticas.</p>
+          <p><strong>Problema de aprendizagem:</strong> Os participantes precisavam internalizar conceitos da LGPD e identificar situações de vulnerabilidade em e-mails, senhas e compartilhamento de arquivos no dia a dia.</p>
+        </div>
+
+        <div class="case-section">
+          <h3>Objetivos de Aprendizagem</h3>
+          <ul>
+            <li><strong>Identificar</strong> potenciais e-mails de <em>phishing</em> em cenários simulados.</li>
+            <li><strong>Aplicar</strong> as regras de manuseio seguro de dados pessoais conforme a LGPD.</li>
+            <li><strong>Tomar decisões</strong> corretas diante de incidentes de segurança de baixa e média complexidade.</li>
+          </ul>
+        </div>
+
+        <div class="case-section">
+          <h3>Estratégia Instrucional</h3>
+          <p>Adotou-se uma abordagem baseada em cenários de risco iminente, onde o colaborador assume o papel de decisor e recebe feedback instantâneo sobre as consequências operacionais e legais de sua escolha.</p>
+        </div>
+
+        <div class="case-section">
+          <h3>Avaliação da Aprendizagem</h3>
+          <p>A verificação ocorre por meio de um desafio prático final com 5 simulações de dilemas corporativos, onde o participante precisa atingir 80% de acertos para certificar-se na conformidade.</p>
+        </div>
+
+        <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="https://larissasilvah.github.io/Portif-lio./" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: auto;">Explorar experiência interativa →</a>
+          <a href="https://github.com/larissasilvah" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: auto;">Ver código no GitHub →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL 2: ATENDIMENTO B2B (DESTAQUE) -->
+    <div class="modal-overlay" id="modal-b2b">
+      <div class="modal-container">
+        <button class="modal-close" onclick="closeModal('modal-b2b')"><i data-lucide="x"></i></button>
+        <button class="back-to-projects-btn" onclick="closeModal('modal-b2b')"><i data-lucide="arrow-left"></i> Voltar aos projetos</button>
+        
+        <div class="case-header">
+          <span class="case-tag-fictional">Projeto Conceitual &bull; Case Destaque</span>
+          <h2 class="case-title">Atendimento B2B & Gestão de Contas</h2>
+        </div>
+
+        <div class="case-meta-grid">
+          <div class="case-meta-item">
+            <strong>Solução</strong>
+            <span>Treinamento corporativo imersivo</span>
+          </div>
+          <div class="case-meta-item">
+            <strong>Público</strong>
+            <span>Equipes de atendimento, CS e vendas B2B</span>
+          </div>
+          <div class="case-meta-item">
+            <strong>Formato</strong>
+            <span>Web interativa em módulos sequenciais</span>
+          </div>
+          <div class="case-meta-item">
+            <strong>Estratégias</strong>
+            <span>Cenários, estudo de caso e prática deliberada</span>
+          </div>
+          <div class="case-meta-item">
+            <strong>Tecnologias</strong>
+            <span>HTML5, CSS3, JavaScript</span>
+          </div>
+        </div>
+
+        <div class="case-section">
+          <h3>Contexto</h3>
+          <p>Mercados B2B exigem relacionamentos de longo prazo, onde falhas na comunicação e na condução de contas resultam em churn e perda de receita recorrente.</p>
+        </div>
+
+        <div class="case-section">
+          <h3>Problema & Problema de Aprendizagem</h3>
+          <p><strong>Problema organizacional:</strong> Atendentes tratavam contas B2B de forma transacional, sem compreender dores estratégicas dos clientes.</p>
+          <p><strong>Problema de aprendizagem:</strong> A equipe precisava desenvolver comunicação consultiva e habilidade para negociar com interlocutores exigentes em momentos críticos.</p>
+        </div>
+
+        <div class="case-section">
+          <h3>Objetivos de Aprendizagem</h3>
+          <ul>
+            <li><strong>Reconhecer</strong> perfis distintos de tomadores de decisão em empresas cliente.</li>
+            <li><strong>Demonstrar</strong> postura consultiva na resolução de reclamações complexas.</li>
+            <li><strong>Elaborar</strong> um plano de ação focado na retenção e entrega de valor percebido.</li>
+          </ul>
+        </div>
+
+        <div class="case-section">
+          <h3>Por que essa estratégia?</h3>
+          <p>A solução prioriza aprendizagem baseada em cenários porque o objetivo não é apenas transmitir conceitos teóricos de atendimento, mas permitir que o participante pratique decisões em situações muito próximas às encontradas no cotidiano operacional B2B.</p>
+        </div>
+
+        <div class="case-section">
+          <h3>Da teoria à prática</h3>
+          <div class="storyboard-box">
+            <div class="storyboard-row"><span class="storyboard-label">Conceito:</span><span>Alinhamento de expectativas no onboarding.</span></div>
+            <div class="storyboard-row"><span class="storyboard-label">Exemplo:</span><span>Cliente demonstra insatisfação com prazos.</span></div>
+            <div class="storyboard-row"><span class="storyboard-label">Decisão:</span><span>O aluno escolhe entre 3 abordagens de contorno.</span></div>
+            <div class="storyboard-row"><span class="storyboard-label">Feedback:</span><span>Análise do impacto da escolha no índice de satisfação.</span></div>
+            <div class="storyboard-row"><span class="storyboard-label">Aplicação:</span><span>Uso do playbook validado na rotina de contas.</span></div>
+          </div>
+        </div>
+
+        <div class="case-section">
+          <h3>Arquitetura da Solução</h3>
+          <p>01 — Fundamentos B2B → 02 — Perfis de interlocutores → 03 — Comunicação profissional → 04 — Simulação de crises → 05 — Valor e retenção → 06 — Plano de ação</p>
+        </div>
+
+        <div class="case-section">
+          <h3>Avaliação da Aprendizagem</h3>
+          <p>Verificação por meio de simulação interativa de ponta a ponta com simulação de cliente insatisfeito e métrica de sucesso de retenção.</p>
+        </div>
+
+        <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="https://larissasilvah.github.io/atendimento-ao-cliente./" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: auto;">Explorar experiência interativa →</a>
+          <a href="https://github.com/larissasilvah" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: auto;">Ver código no GitHub →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL 3: COMUNICAÇÃO ASSERTIVA & FEEDBACK -->
+    <div class="modal-overlay" id="modal-comunicacao">
+      <div class="modal-container">
+        <button class="modal-close" onclick="closeModal('modal-comunicacao')"><i data-lucide="x"></i></button>
+        <button class="back-to-projects-btn" onclick="closeModal('modal-comunicacao')"><i data-lucide="arrow-left"></i> Voltar aos projetos</button>
+        
+        <div class="case-header">
+          <span class="case-tag-fictional">Projeto Autoral &bull; Estudo de Caso</span>
+          <h2 class="case-title">Comunicação Assertiva & Feedback no Trabalho Remoto</h2>
+        </div>
+
+        <div class="case-meta-grid">
+          <div class="case-meta-item">
+            <strong>Solução</strong>
+            <span>Treinamento comportamental interativo</span>
+          </div>
+          <div class="case-meta-item">
+            <strong>Público</strong>
+            <span>Lideranças e colaboradores remotos</span>
+          </div>
+          <div class="case-meta-item">
+            <strong>Formato</strong>
+            <span>Trilha baseada em diálogos situacionais</span>
+          </div>
+          <div class="case-meta-item">
+            <strong>Estratégias</strong>
+            <span>Estudo de caso + Prática de feedback construtivo</span>
+          </div>
+          <div class="case-meta-item">
+            <strong>Tecnologias</strong>
+            <span>HTML5, CSS3, JavaScript</span>
+          </div>
+        </div>
+
+        <div class="case-section">
+          <h3>Contexto</h3>
+          <p>O modelo de trabalho remoto intensificou ruídos de comunicação escrita e o receio de gestores e pares em conduzirem conversas delicadas de feedback.</p>
+        </div>
+
+        <div class="case-section">
+          <h3>Problema & Problema de Aprendizagem</h3>
+          <p><strong>Problema organizacional:</strong> Conflitos e desalinhamentos acumulados por falta de clareza na comunicação assíncrona.</p>
+          <p><strong>Problema de aprendizagem:</strong> Desenvolver competência na formulação de feedbacks estruturados (modelo SBI - Situação, Comportamento, Impacto).</p>
+        </div>
+
+        <div class="case-section">
+          <h3>Objetivos de Aprendizagem</h3>
+          <ul>
+            <li><strong>Diferenciar</strong> comunicação agressiva, passiva e assertiva.</li>
+            <li><strong>Elaborar</strong> mensagens de feedback utilizando o modelo estruturado.</li>
+            <li><strong>Conduzir</strong> uma conversa simulada de desalinhamento de entregas.</li>
+          </ul>
+        </div>
+
+        <div class="case-section">
+          <h3>Estratégia Instrucional</h3>
+          <p>Uso de cartões de decisão com escolha de frases em cenários de chat e reuniões virtuais, destacando o impacto do tom de voz e da clareza.</p>
+        </div>
+
+        <div class="case-section">
+          <h3>Avaliação da Aprendizagem</h3>
+          <p>Quiz prático de montagem de frases assertivas e análise de cenários reais de desalinhamento.</p>
+        </div>
+
+        <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="https://larissasilvah.github.io/Portif-lio./" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: auto;">Explorar experiência interativa →</a>
+          <a href="https://github.com/larissasilvah" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: auto;">Ver código no GitHub →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL 4: FERRAMENTA EPI -->
+    <div class="modal-overlay" id="modal-epi">
+      <div class="modal-container">
+        <button class="modal-close" onclick="closeModal('modal-epi')"><i data-lucide="x"></i></button>
+        <button class="back-to-projects-btn" onclick="closeModal('modal-epi')"><i data-lucide="arrow-left"></i> Voltar aos projetos</button>
+        
+        <div class="case-header">
+          <span class="case-tag-fictional">Projeto Conceitual &bull; Ferramenta de Apoio</span>
+          <h2 class="case-title">Ferramenta Automática de Seleção de EPI</h2>
+        </div>
+
+        <div class="case-meta-grid">
+          <div class="case-meta-item">
+            <strong>Solução</strong>
+            <span>Ferramenta digital de apoio à performance</span>
+          </div>
+          <div class="case-meta-item">
+            <strong>Público</strong>
+            <span>Técnicos de segurança e operacionais</span>
+          </div>
+          <div class="case-meta-item">
+            <strong>Formato</strong>
+            <span>Aplicação web interativa / utilitário</span>
+          </div>
+          <div class="case-meta-item">
+            <strong>Estratégias</strong>
+            <span>Job Aid digital + Tomada de decisão guiada</span>
+          </div>
+          <div class="case-meta-item">
+            <strong>Tecnologias</strong>
+            <span>HTML5, CSS3, JavaScript</span>
+          </div>
+        </div>
+
+        <div class="case-section">
+          <h3>Contexto</h3>
+          <p>Em ambientes industriais e operacionais, a escolha incorreta ou incompleta de Equipamentos de Proteção Individual (EPI) eleva drasticamente o risco de acidentes e não conformidades com normas regulamentadoras.</p>
+        </div>
+
+        <div class="case-section">
+          <h3>Problema & Problema de Aprendizagem</h3>
+          <p><strong>Problema organizacional:</strong> Dificuldade da equipe em cruzar rapidamente o tipo de risco físico/químico com o CA (Certificado de Aprovação) e o EPI adequado sem consultar extensos manuais.</p>
+          <p><strong>Problema de aprendizagem:</strong> O profissional precisava consultar e aplicar com precisão os critérios normativos de seleção de proteção diretamente no local de trabalho.</p>
+        </div>
+
+        <div class="case-section">
+          <h3>Objetivos de Aprendizagem</h3>
+          <ul>
+            <li><strong>Selecionar</strong> o EPI correto com base na matriz de riscos operacionais.</li>
+            <li><strong>Verificar</strong> requisitos de conformidade para diferentes agentes de exposição.</li>
+          </ul>
+        </div>
+
+        <div class="case-section">
+          <h3>Estratégia Instrucional</h3>
+          <p>Criação de um *Job Aid* (suporte de desempenho) interativo. Diferente de um curso tradicional, a ferramenta funciona como um assistente de bolso que reduz a carga cognitiva e apoia a decisão imediata no *point of work*.</p>
+        </div>
+
+        <div class="case-section">
+          <h3>Avaliação da Aprendizagem</h3>
+          <p>Validação por meio de cenários de checagem onde o operador insere os riscos da atividade e o sistema avalia se os equipamentos escolhidos garantem proteção integral.</p>
+        </div>
+
+        <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="https://larissasilvah.github.io/Portif-lio./" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: auto;">Explorar experiência interativa →</a>
+          <a href="https://github.com/larissasilvah" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: auto;">Ver código no GitHub →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts de Interatividade (Modais e Ícones) -->
+    <script>
+      // Inicializar ícones Lucide
+      lucide.createIcons();
+
+      // Funções de Controle dos Modais
+      function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+          modal.classList.add('active');
+          document.body.style.overflow = 'hidden'; // Previne scroll da página de fundo
+        }
+      }
+
+      function closeModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+          modal.classList.remove('active');
+          document.body.style.overflow = 'auto'; // Restaura o scroll
+        }
+      }
+
+      // Fechar modal ao clicar fora da caixa de conteúdo
+      window.addEventListener('click', function(event) {
+        if (event.target.classList.contains('modal-overlay')) {
+          event.target.classList.remove('active');
+          document.body.style.overflow = 'auto';
+        }
+      });
+
+      // Fechar com a tecla ESC
+      window.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+          document.querySelectorAll('.modal-overlay').forEach(modal => {
+            modal.classList.remove('active');
+          });
+          document.body.style.overflow = 'auto';
+        }
+      });
+    </script>
+  </body>
+</html>
