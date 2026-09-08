@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Larissa Raiane da Silva — Designer Instrucional, Educação Corporativa e experiências digitais de aprendizagem.">
+  <title>Larissa Raiane da Silva | Designer Instrucional</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root{
+      --bg:#08111f;
+      --surface:#101c2d;
+      --surface-2:#142238;
+      --border:#24354d;
+      --text:#f7f9fc;
+      --muted:#9eacc0;
+      --accent:#38bdf8;
+      --accent-2:#7dd3fc;
+      --success:#34d399;
+      --shadow:0 24px 70px rgba(0,0,0,.28);
+      --radius:18px;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:
+        radial-gradient(circle at 15% 0%,rgba(56,189,248,.10),transparent 30%),
+        radial-gradient(circle at 90% 10%,rgba(125,211,252,.07),transparent 25%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.65;
+    }
+    a{color:inherit}
+    button{font:inherit}
+    .container{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .section{padding:100px 0}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:8px;
+      color:var(--accent-2);font-size:.78rem;font-weight:800;
+      letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px
+    }
+    .eyebrow::before{content:"";width:28px;height:1px;background:var(--accent)}
+    .section-heading{max-width:760px;margin-bottom:44px}
+    .section-heading h2{font-size:clamp(2rem,4vw,3rem);line-height:1.12;letter-spacing:-.04em;margin-bottom:14px}
+    .section-heading p{color:var(--muted);font-size:1.05rem}
+    .accent{color:var(--accent)}
+
+    /* HEADER */
+    header{
+      position:sticky;top:0;z-index:50;
+      background:rgba(8,17,31,.84);backdrop-filter:blur(18px);
+      border-bottom:1px solid rgba(36,53,77,.8)
+    }
+    nav{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{text-decoration:none;display:flex;flex-direction:column;line-height:1.15}
+    .brand strong{font-size:1rem}
+    .brand span{font-size:.72rem;color:var(--muted);margin-top:4px}
+    .nav-links{display:flex;gap:24px;list-style:none}
+    .nav-links a{text-decoration:none;color:var(--muted);font-size:.88rem;font-weight:600;transition:.2s}
+    .nav-links a:hover{color:var(--accent)}
+    .nav-cta{border:1px solid var(--border);padding:9px 14px;border-radius:10px}
+    .nav-cta:hover{border-color:var(--accent)}
+
+    /* HERO */
+    .hero{padding:110px 0 80px}
+    .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:70px;align-items:center}
+    .hero h1{font-size:clamp(2.7rem,6vw,5.1rem);line-height:1.02;letter-spacing:-.065em;max-width:850px}
+    .hero h1 span{color:var(--accent)}
+    .hero-lead{font-size:1.12rem;color:var(--muted);max-width:700px;margin:25px 0 30px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:9px;
+      padding:13px 18px;border-radius:11px;text-decoration:none;
+      font-weight:700;font-size:.9rem;border:1px solid transparent;cursor:pointer;transition:.2s
+    }
+    .btn-primary{background:var(--accent);color:#03111c}
+    .btn-primary:hover{transform:translateY(-2px);background:var(--accent-2)}
+    .btn-secondary{border-color:var(--border);background:rgba(16,28,45,.65);color:var(--text)}
+    .btn-secondary:hover{border-color:var(--accent);color:var(--accent)}
+    .hero-proof{
+      border:1px solid var(--border);background:linear-gradient(145deg,rgba(20,34,56,.92),rgba(16,28,45,.7));
+      border-radius:24px;padding:25px;box-shadow:var(--shadow)
+    }
+    .proof-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:800}
+    .proof-title{font-size:1.45rem;font-weight:800;margin:10px 0 20px}
+    .proof-flow{display:grid;gap:10px}
+    .flow-item{display:flex;align-items:center;gap:12px;padding:12px;border:1px solid var(--border);border-radius:12px;background:rgba(8,17,31,.45)}
+    .flow-number{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:rgba(56,189,248,.12);color:var(--accent);font-weight:800;font-size:.78rem}
+    .flow-item strong{font-size:.82rem}
+    .flow-item small{display:block;color:var(--muted);font-size:.7rem}
+
+    .logic-strip{
+      margin-top:45px;padding:18px 20px;border:1px solid var(--border);border-radius:15px;
+      display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;color:var(--muted);font-size:.82rem
+    }
+    .logic-strip b{color:var(--text)}
+    .logic-strip i{color:var(--accent);font-style:normal}
+
+    /* ABOUT */
+    .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
+    .about-main,.about-side{border:1px solid var(--border);background:var(--surface);border-radius:var(--radius);padding:30px}
+    .about-main h3{font-size:1.5rem;margin-bottom:14px}
+    .about-main p{color:var(--muted);margin-bottom:15px}
+    .about-main p:last-child{margin-bottom:0}
+    .about-side{display:grid;gap:12px}
+    .mini-card{border:1px solid var(--border);background:rgba(8,17,31,.35);border-radius:13px;padding:18px}
+    .mini-card strong{display:block;margin-bottom:5px;font-size:.9rem}
+    .mini-card span{color:var(--muted);font-size:.82rem}
+
+    /* PROCESS */
+    .process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+    .process-card{padding:23px;border:1px solid var(--border);background:var(--surface);border-radius:15px}
+    .process-card .num{color:var(--accent);font-weight:800;font-size:.75rem}
+    .process-card h3{font-size:1rem;margin:9px 0 6px}
+    .process-card p{font-size:.83rem;color:var(--muted)}
+
+    /* PROJECTS */
+    .project-list{display:grid;gap:22px}
+    .project{
+      display:grid;grid-template-columns:1fr 1.25fr;gap:30px;
+      padding:28px;border:1px solid var(--border);background:linear-gradient(145deg,rgba(16,28,45,.96),rgba(16,28,45,.72));
+      border-radius:20px;transition:.25s
+    }
+    .project:hover{border-color:#3d5a7c;transform:translateY(-2px)}
+    .project:nth-child(even){grid-template-columns:1.25fr 1fr}
+    .project:nth-child(even) .project-visual{order:2}
+    .project-info{display:flex;flex-direction:column;justify-content:center}
+    .project-kicker{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+    .badge{font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;padding:5px 8px;border-radius:999px;background:rgba(56,189,248,.1);color:var(--accent);border:1px solid rgba(56,189,248,.18)}
+    .badge.green{color:var(--success);background:rgba(52,211,153,.08);border-color:rgba(52,211,153,.18)}
+    .project h3{font-size:1.55rem;line-height:1.2;margin-bottom:10px}
+    .project-desc{color:var(--muted);font-size:.9rem;margin-bottom:18px}
+    .tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:22px}
+    .tag{font-size:.68rem;color:#c5d0df;border:1px solid var(--border);padding:5px 8px;border-radius:7px}
+    .project-meta{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:20px}
+    .meta-box{padding:11px;border:1px solid var(--border);border-radius:10px;background:rgba(8,17,31,.28)}
+    .meta-box small{display:block;color:var(--muted);font-size:.64rem;text-transform:uppercase;letter-spacing:.06em}
+    .meta-box strong{display:block;font-size:.76rem;margin-top:3px}
+    .project-visual{
+      min-height:330px;border:1px solid var(--border);border-radius:15px;
+      background:
+        linear-gradient(135deg,rgba(56,189,248,.12),transparent 45%),
+        radial-gradient(circle at 80% 20%,rgba(125,211,252,.1),transparent 25%),
+        #0b1627;
+      display:flex;align-items:center;justify-content:center;padding:25px
+    }
+    .mockup{width:min(100%,410px);border:1px solid #30435d;border-radius:14px;background:#0d192a;overflow:hidden;box-shadow:0 18px 45px rgba(0,0,0,.3)}
+    .mockup-top{height:34px;display:flex;align-items:center;gap:5px;padding:0 12px;border-bottom:1px solid var(--border)}
+    .dot{width:7px;height:7px;border-radius:50%;background:#496079}
+    .mockup-body{padding:20px}
+    .mockup-label{font-size:.62rem;color:var(--accent);text-transform:uppercase;font-weight:800;letter-spacing:.1em}
+    .mockup-body h4{font-size:1.1rem;margin:8px 0 12px}
+    .mockup-body p{font-size:.73rem;color:var(--muted);margin-bottom:14px}
+    .mock-line{height:9px;background:#1d2d44;border-radius:5px;margin:8px 0}
+    .mock-line.short{width:65%}
+    .choice{padding:10px;border:1px solid #2d405a;border-radius:9px;margin-top:8px;font-size:.68rem;color:#cbd5e1}
+    .choice.active{border-color:rgba(56,189,248,.6);background:rgba(56,189,248,.08);color:var(--accent-2)}
+    .project-footer{display:flex;gap:10px;flex-wrap:wrap}
+
+    /* COMPETENCIES */
+    .competencies{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+    .competency{padding:24px;border:1px solid var(--border);border-radius:15px;background:var(--surface)}
+    .competency h3{font-size:1rem;margin-bottom:12px}
+    .competency ul{list-style:none;display:grid;gap:8px}
+    .competency li{font-size:.82rem;color:var(--muted);padding-left:17px;position:relative}
+    .competency li::before{content:"";position:absolute;left:0;top:.7em;width:5px;height:5px;border-radius:50%;background:var(--accent)}
+
+    /* CONTACT */
+    .contact{border:1px solid var(--border);border-radius:24px;padding:45px;background:linear-gradient(135deg,rgba(56,189,248,.09),rgba(16,28,45,.8))}
+    .contact h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.04em;max-width:650px;line-height:1.1}
+    .contact p{color:var(--muted);max-width:650px;margin:14px 0 25px}
+    .contact-email{color:var(--accent);font-weight:700;text-decoration:none}
+
+    footer{border-top:1px solid var(--border);padding:28px 0;color:var(--muted);font-size:.75rem}
+    .footer-inner{display:flex;justify-content:space-between;gap:15px;align-items:center}
+    .footer-links{display:flex;gap:16px}
+    .footer-links a{text-decoration:none}.footer-links a:hover{color:var(--accent)}
+
+    /* MODAL */
+    .modal{position:fixed;inset:0;z-index:100;display:none;padding:20px;background:rgba(2,8,18,.8);backdrop-filter:blur(10px);overflow:auto}
+    .modal.open{display:flex;align-items:flex-start;justify-content:center}
+    .modal-content{width:min(900px,100%);margin:30px auto;background:#0e1a2b;border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
+    .modal-header{padding:28px 30px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;gap:20px}
+    .modal-header h2{font-size:1.6rem;line-height:1.2}
+    .close{background:none;border:0;color:var(--muted);cursor:pointer;padding:5px}.close:hover{color:var(--text)}
+    .modal-body{padding:30px}
+    .modal-intro{color:var(--muted);margin:10px 0 24px}
+    .spec-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-bottom:28px}
+    .spec{border:1px solid var(--border);border-radius:10px;padding:12px}
+    .spec small{display:block;color:var(--muted);font-size:.6rem;text-transform:uppercase}
+    .spec strong{display:block;font-size:.72rem;margin-top:4px}
+    .modal-section{margin-top:28px}.modal-section h3{font-size:1rem;margin-bottom:9px}.modal-section p,.modal-section li{font-size:.84rem;color:var(--muted)}
+    .modal-section ul{padding-left:20px;display:grid;gap:7px}
+    .objective-list{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;list-style:none!important;padding:0!important}
+    .objective-list li{border:1px solid var(--border);padding:15px;border-radius:10px}
+    .success-box{border:1px solid rgba(52,211,153,.25);background:rgba(52,211,153,.06);padding:17px;border-radius:12px;color:#c8f9e5;font-size:.8rem;margin-top:14px}
+    .modal-actions{margin-top:30px;display:flex;flex-wrap:wrap;gap:10px}
+
+    @media(max-width:900px){
+      .hero-grid,.about-grid,.project,.project:nth-child(even){grid-template-columns:1fr}
+      .project:nth-child(even) .project-visual{order:0}
+      .project-visual{min-height:260px}
+      .process-grid{grid-template-columns:repeat(2,1fr)}
+      .spec-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:680px){
+      .container{width:min(var(--max),calc(100% - 28px))}
+      .section{padding:72px 0}
+      .nav-links{display:none}
+      .hero{padding-top:75px}
+      .hero h1{font-size:2.7rem}
+      .process-grid,.competencies,.objective-list{grid-template-columns:1fr}
+      .project-meta{grid-template-columns:1fr}
+      .modal-header,.modal-body{padding:22px}
+      .footer-inner{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <nav class="container">
+    <a class="brand" href="#inicio" aria-label="Ir para o início">
+      <strong>Larissa Raiane</strong>
+      <span>Designer Instrucional · Educação Corporativa</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#processo">Processo DI</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#competencias">Competências</a></li>
+      <li><a class="nav-cta" href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Design Instrucional + Educação Corporativa</div>
+          <h1>Transformo <span>problemas de negócio</span> em experiências de aprendizagem.</h1>
+          <p class="hero-lead">
+            Desenvolvo soluções educacionais com diagnóstico, objetivos mensuráveis,
+            arquitetura pedagógica, cenários práticos e experiências digitais interativas.
+          </p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#projetos">Explorar projetos <i data-lucide="arrow-right"></i></a>
+            <a class="btn btn-secondary" href="#processo">Ver meu processo <i data-lucide="workflow"></i></a>
+          </div>
+        </div>
+
+        <aside class="hero-proof" aria-label="Meu processo de design instrucional">
+          <span class="proof-label">Como penso uma solução</span>
+          <div class="proof-title">Do problema à experiência</div>
+          <div class="proof-flow">
+            <div class="flow-item"><div class="flow-number">01</div><div><strong>Diagnóstico</strong><small>Entender o problema real</small></div></div>
+            <div class="flow-item"><div class="flow-number">02</div><div><strong>Objetivos</strong><small>Definir comportamentos observáveis</small></div></div>
+            <div class="flow-item"><div class="flow-number">03</div><div><strong>Estratégia</strong><small>Escolher a melhor experiência</small></div></div>
+            <div class="flow-item"><div class="flow-number">04</div><div><strong>Desenvolvimento</strong><small>Materializar e testar</small></div></div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="logic-strip">
+        <b>Problema</b><i>→</i><b>Necessidade de aprendizagem</b><i>→</i><b>Objetivo</b><i>→</i><b>Cenário</b><i>→</i><b>Prática</b><i>→</i><b>Avaliação</b>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="section">
+    <div class="container">
+      <div class="section-heading">
+        <div class="eyebrow">Sobre</div>
+        <h2>Pedagogia aplicada a <span class="accent">problemas corporativos.</span></h2>
+        <p>Meu foco não é criar treinamento apenas bonito. É construir experiências que façam sentido para o negócio e para quem precisa aplicar o que aprendeu.</p>
+      </div>
+
+      <div class="about-grid">
+        <article class="about-main">
+          <h3>Meu posicionamento</h3>
+          <p>
+            Sou Designer Instrucional com formação em Pedagogia e foco em Educação Corporativa,
+            T&D e experiências digitais de aprendizagem.
+          </p>
+          <p>
+            Estruturo soluções a partir da análise do público, do contexto e do comportamento
+            esperado, transformando necessidades em objetivos, estratégias, roteiros, atividades,
+            avaliações e produtos digitais.
+          </p>
+          <p>
+            Nos projetos apresentados aqui, demonstro tanto a lógica pedagógica quanto a capacidade
+            de materializar a solução com HTML, CSS e JavaScript.
+          </p>
+        </article>
+
+        <div class="about-side">
+          <div class="mini-card"><strong>Análise</strong><span>Necessidades, público, contexto e desempenho esperado.</span></div>
+          <div class="mini-card"><strong>Arquitetura</strong><span>Objetivos, conteúdos, sequência, prática e avaliação.</span></div>
+          <div class="mini-card"><strong>Experiência</strong><span>Cenários, simulações, feedback e tomada de decisão.</span></div>
+          <div class="mini-card"><strong>Tecnologia</strong><span>HTML5, CSS3, JavaScript e interfaces digitais educacionais.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="processo" class="section">
+    <div class="container">
+      <div class="section-heading">
+        <div class="eyebrow">Processo de Design Instrucional</div>
+        <h2>Uma solução começa antes da primeira tela.</h2>
+        <p>O processo organiza a tomada de decisão e evita transformar qualquer problema de desempenho em “mais um curso”.</p>
+      </div>
+
+      <div class="process-grid">
+        <article class="process-card"><span class="num">01</span><h3>Diagnóstico</h3><p>Identificação do problema, contexto, causas e necessidade real.</p></article>
+        <article class="process-card"><span class="num">02</span><h3>Análise do público</h3><p>Perfil, conhecimentos prévios, rotina, barreiras e contexto de aplicação.</p></article>
+        <article class="process-card"><span class="num">03</span><h3>Objetivos instrucionais</h3><p>Comportamentos observáveis e critérios de sucesso.</p></article>
+        <article class="process-card"><span class="num">04</span><h3>Estratégia & arquitetura</h3><p>Escolha de formato, prática, cenários, conteúdo e jornada.</p></article>
+        <article class="process-card"><span class="num">05</span><h3>Desenvolvimento</h3><p>Roteiro, protótipo, interface e implementação da experiência.</p></article>
+        <article class="process-card"><span class="num">06</span><h3>Avaliação & iteração</h3><p>Verificação da aprendizagem e identificação de oportunidades de melhoria.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="projetos" class="section">
+    <div class="container">
+      <div class="section-heading">
+        <div class="eyebrow">Projetos selecionados</div>
+        <h2>Quatro problemas. <span class="accent">Quatro soluções diferentes.</span></h2>
+        <p>Os cases foram estruturados para evidenciar raciocínio instrucional, tomada de decisão e capacidade de execução digital.</p>
+      </div>
+
+      <div class="project-list">
+
+        <article class="project">
+          <div class="project-info">
+            <div class="project-kicker"><span class="badge">Projeto conceitual</span><span class="badge green">Compliance</span></div>
+            <h3>LGPD & Cibersegurança Corporativa</h3>
+            <p class="project-desc">Trilha baseada em dilemas para transformar regras de proteção de dados em decisões práticas do cotidiano.</p>
+            <div class="tags"><span class="tag">Simulação de riscos</span><span class="tag">Tomada de decisão</span><span class="tag">Feedback imediato</span></div>
+            <div class="project-meta">
+              <div class="meta-box"><small>Entrega</small><strong>Trilha web interativa</strong></div>
+              <div class="meta-box"><small>Meu foco</small><strong>Estratégia + experiência</strong></div>
+              <div class="meta-box"><small>Prática</small><strong>5 dilemas situacionais</strong></div>
+              <div class="meta-box"><small>Sucesso projetado</small><strong>≥ 80% de aproveitamento</strong></div>
+            </div>
+            <div class="project-footer"><button class="btn btn-primary" onclick="openModal('lgpd')">Ver case completo <i data-lucide="arrow-up-right"></i></button><a class="btn btn-secondary" href="https://larissasilvah.github.io/TreinamentoCapacita-o-em-Prote-o-de-Dados-LGPD-l-Ciberseguran-a/" target="_blank" rel="noopener">Abrir experiência <i data-lucide="external-link"></i></a></div>
+          </div>
+          <div class="project-visual">
+            <div class="mockup">
+              <div class="mockup-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+              <div class="mockup-body"><span class="mockup-label">Dilema 03 · Proteção de dados</span><h4>O que você faria?</h4><p>Um colaborador solicita o compartilhamento de uma informação sensível fora do fluxo definido.</p><div class="choice active">A. Verificar a legitimidade antes de compartilhar</div><div class="choice">B. Enviar imediatamente para não atrasar a demanda</div><div class="choice">C. Compartilhar em canal pessoal</div></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-info">
+            <div class="project-kicker"><span class="badge green">Case completo</span><span class="badge">Destaque</span></div>
+            <h3>Atendimento B2B & Gestão de Contas</h3>
+            <p class="project-desc">Experiência imersiva para desenvolver comunicação consultiva, gestão de crises e tomada de decisão com clientes B2B.</p>
+            <div class="tags"><span class="tag">Comunicação consultiva</span><span class="tag">Gestão de crises</span><span class="tag">Prática deliberada</span></div>
+            <div class="project-meta">
+              <div class="meta-box"><small>Entrega</small><strong>Trilha web interativa</strong></div>
+              <div class="meta-box"><small>Arquitetura</small><strong>6 módulos sequenciais</strong></div>
+              <div class="meta-box"><small>Prática</small><strong>Cenários + casos</strong></div>
+              <div class="meta-box"><small>Sucesso projetado</small><strong>Decisão adequada em cenários</strong></div>
+            </div>
+            <div class="project-footer"><button class="btn btn-primary" onclick="openModal('b2b')">Ver case completo <i data-lucide="arrow-up-right"></i></button><a class="btn btn-secondary" href="https://larissasilvah.github.io/atendimento-ao-cliente./" target="_blank" rel="noopener">Abrir experiência <i data-lucide="external-link"></i></a></div>
+          </div>
+          <div class="project-visual">
+            <div class="mockup">
+              <div class="mockup-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+              <div class="mockup-body"><span class="mockup-label">Simulador · Cliente B2B</span><h4>Uma crise começou.</h4><p>Escolha a resposta mais adequada e observe o impacto da decisão.</p><div class="choice active">Responder, investigar e propor próximo passo</div><div class="choice">Transferir a responsabilidade</div><div class="choice">Ignorar até o cliente insistir</div></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-info">
+            <div class="project-kicker"><span class="badge">Projeto autoral</span><span class="badge green">Comportamental</span></div>
+            <h3>Comunicação Assertiva & Feedback no Trabalho Remoto</h3>
+            <p class="project-desc">Trilha de aprendizagem baseada em diálogos, decisões e prática de feedback construtivo em ambientes remotos.</p>
+            <div class="tags"><span class="tag">Feedback</span><span class="tag">Cenários práticos</span><span class="tag">Comunicação</span></div>
+            <div class="project-meta">
+              <div class="meta-box"><small>Entrega</small><strong>Experiência interativa</strong></div>
+              <div class="meta-box"><small>Público</small><strong>Líderes e colaboradores</strong></div>
+              <div class="meta-box"><small>Prática</small><strong>Cartas de decisão</strong></div>
+              <div class="meta-box"><small>Sucesso projetado</small><strong>Escolha + justificativa adequada</strong></div>
+            </div>
+            <div class="project-footer"><button class="btn btn-primary" onclick="openModal('comunicacao')">Ver case completo <i data-lucide="arrow-up-right"></i></button><a class="btn btn-secondary" href="https://www.canva.com/design/DAHP9NrY4D0/Cax6j82-uK7V2QenqjyNSQ/view?utm_content=DAHP9NrY4D0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hc4e19bf927" target="_blank" rel="noopener">Abrir material <i data-lucide="external-link"></i></a></div>
+          </div>
+          <div class="project-visual">
+            <div class="mockup">
+              <div class="mockup-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+              <div class="mockup-body"><span class="mockup-label">Diálogo · Feedback</span><h4>Como você responderia?</h4><p>Uma conversa difícil acontece em uma reunião virtual. Escolha a abordagem mais assertiva.</p><div class="choice active">Descrever o comportamento e combinar o próximo passo</div><div class="choice">Generalizar o problema</div><div class="choice">Evitar a conversa</div></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-info">
+            <div class="project-kicker"><span class="badge">Performance support</span><span class="badge green">Ferramenta digital</span></div>
+            <h3>Ferramenta Automática de Seleção de EPI</h3>
+            <p class="project-desc">Job aid interativo para apoiar a seleção adequada de EPI a partir do risco e da atividade executada.</p>
+            <div class="tags"><span class="tag">Job aid</span><span class="tag">Treinamento técnico</span><span class="tag">Decisão guiada</span></div>
+            <div class="project-meta">
+              <div class="meta-box"><small>Entrega</small><strong>Ferramenta web de apoio</strong></div>
+              <div class="meta-box"><small>Foco</small><strong>Performance no trabalho</strong></div>
+              <div class="meta-box"><small>Prática</small><strong>Decisão guiada</strong></div>
+              <div class="meta-box"><small>Sucesso projetado</small><strong>Seleção correta do EPI</strong></div>
+            </div>
+            <div class="project-footer"><button class="btn btn-primary" onclick="openModal('epi')">Ver case completo <i data-lucide="arrow-up-right"></i></button><a class="btn btn-secondary" href="https://larissasilvah.github.io/Treinamento/" target="_blank" rel="noopener">Abrir ferramenta <i data-lucide="external-link"></i></a></div>
+          </div>
+          <div class="project-visual">
+            <div class="mockup">
+              <div class="mockup-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+              <div class="mockup-body"><span class="mockup-label">Assistente de seleção</span><h4>Qual é o risco?</h4><p>Informe a atividade para receber orientação sobre a proteção necessária.</p><div class="choice active">Risco de impacto e projeção</div><div class="choice">Risco ergonômico</div><div class="choice">Risco administrativo</div></div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="competencias" class="section">
+    <div class="container">
+      <div class="section-heading">
+        <div class="eyebrow">Competências</div>
+        <h2>O que eu entrego além da <span class="accent">tela.</span></h2>
+        <p>Competências organizadas para deixar claro ao recrutador onde está minha contribuição no ciclo de uma solução educacional.</p>
+      </div>
+
+      <div class="competencies">
+        <article class="competency"><h3>Design Instrucional</h3><ul><li>Análise de necessidades</li><li>Objetivos instrucionais mensuráveis</li><li>Arquitetura de aprendizagem</li><li>Estratégias e cenários</li><li>Avaliação da aprendizagem</li><li>Roteiros e materiais educacionais</li></ul></article>
+        <article class="competency"><h3>Educação Corporativa & T&D</h3><ul><li>Estruturação de treinamentos</li><li>Desenvolvimento de competências</li><li>Aprendizagem aplicada ao trabalho</li><li>Andragogia</li><li>Desenvolvimento contínuo</li></ul></article>
+        <article class="competency"><h3>Digital & Experiência</h3><ul><li>HTML5, CSS3 e JavaScript</li><li>Experiências interativas</li><li>Prototipação educacional</li><li>UI/UX aplicado à aprendizagem</li><li>Performance support e ferramentas digitais</li></ul></article>
+        <article class="competency"><h3>Base complementar</h3><ul><li>Pedagogia</li><li>RH e desenvolvimento de pessoas</li><li>Comunicação organizacional</li><li>Planejamento e organização</li><li>Excel e controle de dados</li></ul></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="section">
+    <div class="container">
+      <div class="contact">
+        <div class="eyebrow">Contato</div>
+        <h2>Vamos conversar sobre uma solução de aprendizagem?</h2>
+        <p>Estou aberta a oportunidades em Design Instrucional, Educação Corporativa, T&D e desenvolvimento de experiências digitais de aprendizagem.</p>
+        <a class="contact-email" href="mailto:larissarayane1919@gmail.com">larissarayane1919@gmail.com</a>
+        <div class="actions" style="margin-top:24px">
+          <a class="btn btn-primary" href="mailto:larissarayane1919@gmail.com">Entrar em contato <i data-lucide="mail"></i></a>
+          <a class="btn btn-secondary" href="https://github.com/larissasilvah" target="_blank" rel="noopener">Ver GitHub <i data-lucide="github"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- MODAIS -->
+<div class="modal" id="modal-lgpd" role="dialog" aria-modal="true" aria-labelledby="title-lgpd">
+  <div class="modal-content">
+    <div class="modal-header"><div><span class="badge">Projeto conceitual · Estudo de caso</span><h2 id="title-lgpd">LGPD & Cibersegurança Corporativa</h2></div><button class="close" onclick="closeModal('lgpd')" aria-label="Fechar"><i data-lucide="x"></i></button></div>
+    <div class="modal-body">
+      <p class="modal-intro">Solução de treinamento interativo de compliance baseada em dilemas e tomada de decisão.</p>
+      <div class="spec-grid"><div class="spec"><small>Público</small><strong>Colaboradores corporativos</strong></div><div class="spec"><small>Formato</small><strong>Trilha digital</strong></div><div class="spec"><small>Estratégia</small><strong>Simulações + feedback</strong></div><div class="spec"><small>Tecnologia</small><strong>HTML · CSS · JS</strong></div></div>
+      <div class="modal-section"><h3>Problema de aprendizagem</h3><p>Transformar conhecimentos de proteção de dados em decisões práticas diante de situações comuns do ambiente corporativo.</p></div>
+      <div class="modal-section"><h3>Objetivos instrucionais</h3><ul class="objective-list"><li>Reconhecer situações de risco envolvendo dados.</li><li>Selecionar condutas compatíveis com boas práticas.</li><li>Tomar decisões diante de dilemas de privacidade.</li></ul></div>
+      <div class="modal-section"><h3>Estratégia</h3><p>Uso de dilemas situacionais, alternativas de decisão, feedback imediato e progressão por desafios. A prática aproxima o conteúdo do comportamento esperado no trabalho.</p></div>
+      <div class="success-box"><strong>Indicador de sucesso projetado:</strong> atingir pelo menos 80% de aproveitamento na avaliação final.</div>
+      <div class="modal-actions"><a class="btn btn-primary" href="https://larissasilvah.github.io/TreinamentoCapacita-o-em-Prote-o-de-Dados-LGPD-l-Ciberseguran-a/" target="_blank" rel="noopener">Abrir experiência <i data-lucide="external-link"></i></a><button class="btn btn-secondary" onclick="closeModal('lgpd')">Fechar</button></div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal-b2b" role="dialog" aria-modal="true" aria-labelledby="title-b2b">
+  <div class="modal-content">
+    <div class="modal-header"><div><span class="badge green">Destaque · Case completo</span><h2 id="title-b2b">Atendimento B2B & Gestão de Contas</h2></div><button class="close" onclick="closeModal('b2b')" aria-label="Fechar"><i data-lucide="x"></i></button></div>
+    <div class="modal-body">
+      <p class="modal-intro">Treinamento imersivo para atendimento, Customer Success e vendas B2B, estruturado em módulos e situações-problema.</p>
+      <div class="spec-grid"><div class="spec"><small>Público</small><strong>Atendimento · CS · Vendas B2B</strong></div><div class="spec"><small>Formato</small><strong>Web interativo</strong></div><div class="spec"><small>Arquitetura</small><strong>6 módulos</strong></div><div class="spec"><small>Tecnologia</small><strong>HTML · CSS · JS</strong></div></div>
+      <div class="modal-section"><h3>Problema de aprendizagem</h3><p>Desenvolver respostas mais consultivas e consistentes em situações de atendimento, relacionamento e crise com clientes empresariais.</p></div>
+      <div class="modal-section"><h3>Objetivos instrucionais</h3><ul class="objective-list"><li>Aplicar comunicação consultiva em diferentes contextos.</li><li>Gerenciar situações de crise com clareza.</li><li>Escolher respostas adequadas ao perfil e à necessidade do cliente.</li></ul></div>
+      <div class="modal-section"><h3>Arquitetura</h3><p>Jornada sequencial com conteúdos curtos, exemplos, casos, decisões e momentos de avaliação. A lógica parte da compreensão e avança para aplicação.</p></div>
+      <div class="success-box"><strong>Indicador de sucesso projetado:</strong> desempenho adequado nas decisões dos cenários e conclusão da jornada com aproveitamento mínimo definido.</div>
+      <div class="modal-actions"><a class="btn btn-primary" href="https://larissasilvah.github.io/atendimento-ao-cliente./" target="_blank" rel="noopener">Abrir experiência <i data-lucide="external-link"></i></a><button class="btn btn-secondary" onclick="closeModal('b2b')">Fechar</button></div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal-comunicacao" role="dialog" aria-modal="true" aria-labelledby="title-comunicacao">
+  <div class="modal-content">
+    <div class="modal-header"><div><span class="badge">Projeto autoral</span><h2 id="title-comunicacao">Comunicação Assertiva & Feedback no Trabalho Remoto</h2></div><button class="close" onclick="closeModal('comunicacao')" aria-label="Fechar"><i data-lucide="x"></i></button></div>
+    <div class="modal-body">
+      <p class="modal-intro">Trilha comportamental baseada em diálogos, decisões e prática de feedback construtivo para contextos remotos.</p>
+      <div class="spec-grid"><div class="spec"><small>Público</small><strong>Líderes e colaboradores</strong></div><div class="spec"><small>Formato</small><strong>Trilha interativa</strong></div><div class="spec"><small>Estratégia</small><strong>Diálogos + decisões</strong></div><div class="spec"><small>Tecnologia</small><strong>Digital / Canva</strong></div></div>
+      <div class="modal-section"><h3>Problema de aprendizagem</h3><p>Apoiar profissionais na condução de conversas difíceis, especialmente quando a comunicação acontece por reuniões e canais digitais.</p></div>
+      <div class="modal-section"><h3>Objetivos instrucionais</h3><ul class="objective-list"><li>Reconhecer elementos de comunicação assertiva.</li><li>Diferenciar feedback construtivo de julgamentos.</li><li>Selecionar abordagens adequadas em conversas remotas.</li></ul></div>
+      <div class="modal-section"><h3>Estratégia</h3><p>Cartas de decisão e situações de diálogo colocam o participante diante de escolhas próximas à realidade de trabalho, seguidas de reflexão e feedback.</p></div>
+      <div class="success-box"><strong>Indicador de sucesso projetado:</strong> selecionar e justificar condutas adequadas nos cenários propostos.</div>
+      <div class="modal-actions"><a class="btn btn-primary" href="https://www.canva.com/design/DAHP9NrY4D0/Cax6j82-uK7V2QenqjyNSQ/view?utm_content=DAHP9NrY4D0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hc4e19bf927" target="_blank" rel="noopener">Abrir material <i data-lucide="external-link"></i></a><button class="btn btn-secondary" onclick="closeModal('comunicacao')">Fechar</button></div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal-epi" role="dialog" aria-modal="true" aria-labelledby="title-epi">
+  <div class="modal-content">
+    <div class="modal-header"><div><span class="badge green">Performance support</span><h2 id="title-epi">Ferramenta Automática de Seleção de EPI</h2></div><button class="close" onclick="closeModal('epi')" aria-label="Fechar"><i data-lucide="x"></i></button></div>
+    <div class="modal-body">
+      <p class="modal-intro">Ferramenta digital de apoio à decisão para orientar a seleção de EPI conforme o risco e a atividade.</p>
+      <div class="spec-grid"><div class="spec"><small>Público</small><strong>Segurança · Operações</strong></div><div class="spec"><small>Formato</small><strong>Job aid web</strong></div><div class="spec"><small>Estratégia</small><strong>Decisão guiada</strong></div><div class="spec"><small>Tecnologia</small><strong>HTML · CSS · JS</strong></div></div>
+      <div class="modal-section"><h3>Problema de desempenho</h3><p>Facilitar o acesso à orientação necessária no momento da decisão, reduzindo dependência de materiais longos e tornando a consulta mais objetiva.</p></div>
+      <div class="modal-section"><h3>Objetivos</h3><ul class="objective-list"><li>Identificar o risco relacionado à atividade.</li><li>Selecionar a proteção adequada conforme a situação.</li><li>Usar a ferramenta como apoio à decisão no trabalho.</li></ul></div>
+      <div class="modal-section"><h3>Estratégia</h3><p>Em vez de uma sequência tradicional de conteúdo, a solução funciona como performance support: o usuário informa o contexto e recebe orientação estruturada.</p></div>
+      <div class="success-box"><strong>Indicador de sucesso projetado:</strong> realizar corretamente a seleção de EPI nos cenários simulados.</div>
+      <div class="modal-actions"><a class="btn btn-primary" href="https://larissasilvah.github.io/Treinamento/" target="_blank" rel="noopener">Abrir ferramenta <i data-lucide="external-link"></i></a><button class="btn btn-secondary" onclick="closeModal('epi')">Fechar</button></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container footer-inner">
+    <span>© 2026 Larissa Raiane da Silva · Portfólio de Design Instrucional</span>
+    <div class="footer-links"><a href="https://github.com/larissasilvah" target="_blank" rel="noopener">GitHub</a><a href="mailto:larissarayane1919@gmail.com">E-mail</a></div>
+  </div>
+</footer>
+
+<script>
+  lucide.createIcons();
+
+  function openModal(id){
+    const modal=document.getElementById('modal-'+id);
+    if(!modal) return;
+    modal.classList.add('open');
+    document.body.style.overflow='hidden';
+    const close=modal.querySelector('.close');
+    if(close) close.focus();
+  }
+
+  function closeModal(id){
+    const modal=document.getElementById('modal-'+id);
+    if(!modal) return;
+    modal.classList.remove('open');
+    document.body.style.overflow='';
+  }
+
+  document.querySelectorAll('.modal').forEach(modal=>{
+    modal.addEventListener('click',e=>{
+      if(e.target===modal){
+        modal.classList.remove('open');
+        document.body.style.overflow='';
+      }
+    });
+  });
+
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape'){
+      const active=document.querySelector('.modal.open');
+      if(active){
+        active.classList.remove('open');
+        document.body.style.overflow='';
+      }
+    }
+  });
+</script>
+</body>
+</html>
